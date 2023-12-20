@@ -1,0 +1,6 @@
+modelo\Orador.class
+util\ConexionDB.class
+controlador\gestionOradorServlet.class
+controlador\RegistroOrador.class
+controlador\LoginServlet.class
+dao\OradoresDAO.class

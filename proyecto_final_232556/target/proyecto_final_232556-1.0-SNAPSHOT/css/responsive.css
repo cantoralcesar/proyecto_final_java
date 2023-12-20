@@ -1,0 +1,26 @@
+@media only screen and (max-width: 991px){
+    .plan-table>div:nth-last-child(-n + 1){
+        margin: 48px auto auto auto;
+    }
+    .plan-style.blue-shadow{
+        box-shadow: 0px 0px 30px -10px #0652DD;
+    }
+    .plan-style.green-shadow{
+        box-shadow: 0px 0px 30px -10px #02d639;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .plan-style{
+        max-width: 400px;
+    }
+    .plan-table>div:nth-last-child(-n + 2){
+        margin: 48px auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .plan-style{
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,472 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+              integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+        <!--Icons Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <title>Conferencia</title>
+    
+        <style>
+            .custom-clicked {
+                color: white !important;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid mx-5">
+
+                    <a class="navbar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <img src="img/codoacodo.png" alt="logo codo a codo" height="80">
+                        <div class="d-none d-lg-block">
+                            <span class="text-white">Conf Bs As</span>
+                        </div>
+                    </a> 
+
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mi-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="mi-menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="#">La conferencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-muted" href="#speaker" onclick="changeColor(this);">Los oradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-muted" href="#lugar" onclick="changeColor(this);">El lugar y la fecha</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-muted" href="#miForm" onclick="changeColor(this);">Conviértete en orador</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-success font-weight-bold" href="ticket.html">Comprar tickets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" href="vistas/login.jsp">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container-fluid">
+            <!-- Sección imagen principal -->
+            <section class="card">
+                <div class="row">
+
+                    <img src="img/ba1.jpg" class="img-fluid p-0" alt="Buenos Aires">
+                    <div class="card-img-overlay text-white descripcion d-flex justify-content-center align-items-center h-100">
+                        
+                        <div>
+                              <h5 class="card-title d-none d-lg-block">Conf Bs As</h5>
+                               <p class="card-text d-none d-lg-block">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de 
+                                    los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer 
+                                    nivel que tenemos para tí. Te esperamos!</p>
+                               <div class="text-center" >
+                                    <a href="#miForm" class="btn btn-lg btn-outline-secondary text-white">Quiero ser orador</a>
+                                    <a href="ticket.html" class="btn btn-lg btnPersonal">Comprar Tickets</a>
+                               </div>
+                        </div>
+                   
+                    </div>
+                </div>
+            </section>  
+            
+            <div id="speaker">
+                <p>CONOCE A LOS</p>
+                <h1>ORADORES</h1>
+            </div>
+
+            <div class="container g-5 mb-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/steve.jpg" alt="Steve Job" class="card-img-top">
+                            <div class="card-body">
+                                <div id="ability">
+                                    <span class="bg-warning">Javascript</span> <span class="bg-info text-white">React</span>
+                                </div>
+
+                                <h4 class="card-title">Steve Jobs</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem,
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/bill.jpg" alt="Bill Gate" class="card-img-top">
+                            <div class="card-body">
+                                <div id="ability">
+                                    <span class="bg-warning">Javascript</span> <span class="bg-info text-white">React</span>
+                                </div>
+
+                                <h4 class="card-title">Bill Gates</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem,
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/ada.jpeg" alt="Ada Lovelace" class="card-img-top">
+                            <div class="card-body">
+                                <div id="ability">
+                                    <span class="bg-secondary text-white">Negocios</span> <span class="bg-danger text-white">Startup</span>
+                                </div>
+
+                                <h4 class="card-title">Ada Lovelace</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem,
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Boton para ver los oradores-->
+            <div id="speaker" class="mb-5">
+                <a href="vistas/verOradores.jsp" class="btn btn-lg btn-success" onclick="">Ver otros oradores</a>
+            </div>
+
+            <!-- Sección Dividida-->
+            <section class="container-fluid p-0" id="lugar">
+                <div class="row">
+                    <div class="col-rigth col-lg-6 col-md-12" style="background-image: url('img/honolulu.jpg'); background-size: cover; min-height: 50vh;">
+                           <!-- Hay que revisar no sale imagen -->
+                    </div>
+
+                    <div class="col-left col-lg-6 col-md-12">
+                        <h2 class="text-center"><span class="bs">Bs As</span> - Noviembre</h2>
+                        <p class="pbs"> Buenos Aires es la provincia y localidad mas grande del estado de Argentina, en los Estados Unidos, Honolulu es la más sureña de entre las 
+                            principales ciudades estadounidienses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el 
+                            condado de Honolulu han formado una ciudad condado consolidada que cubre toda la ciudad (aproximadamente 600 km2 de superficie).</p>
+
+                        <!-- botón modal (Conoce más) -->
+                        <div class="container link">
+                            <a data-bs-toggle="modal" data-bs-target="#mi-modal">Conoce más</a>
+                            <div class="modal fade" id="mi-modal" data-bs-backdrop="static">  
+                                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centerd">
+
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <h5 class="modal-title p-modal">Honolulú</h5>
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="p-modal">Honolulu es la isla más poblada y la capital de Hawái, conocida por su fabuloso entorno natural. La ciudad está llena de 
+                                                hermosas playas y sitios donde realizar excursiones llenas de aventura. Aparte de una naturaleza impresionante, Honolulu tiene una 
+                                                escena gastronómica muy animada, con los deliciosos platos Pipikaula y Laulau encabezando la lista. Comienza el día con una caminata 
+                                                en la Cabeza de Diamante para disfrutar de unas magníficas vistas desde la cima o disfruta relajándote en la playa de Waikiki, un 
+                                                lugar que merece la pena visitar en todo momento.</p>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+
+                                </div>              
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <div id="speaker">
+                <p>CONVIERTE EN UN</p>
+                <h1>ORADOR</h1>
+                <p>Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar?</p>
+            </div>
+
+            <!-- Formulario (Form)-->
+            <div class="container col-lg-8 col-md-12 col-sm-12">
+                <form action="registroOrador" method="post" class="row g-3 mt-3" id="miForm" onsubmit="return validarFormulario();">
+
+                    <div class="col-lg-6 col-sm-12">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                        <small id="nombreError" class="text-danger"></small>
+                    </div>
+                
+                    <div class="col-lg-6 col-sm-12">
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese sus apellidos">
+                        <small id="apellidoError" class="text-danger"></small>
+                    </div>
+                    
+                    <div class="col-12">
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="Ingrese su correo electrónico">
+                    <small id="emailError" class="text-danger"></small>
+                    </div>
+                
+                    <div class="mb-3 mt-3">
+                        <textarea class="form-control" rows="5" id="tema" name="tema" placeholder="Sobre que quieres hablar?"></textarea>
+                        <small id="comentarioError" class="text-danger"></small>
+                    </div>
+                
+                    <input type="submit" class="btn btnPersonal fw-bold btn-lg mb-3"  value="Enviar">
+                </form>             
+                
+            </div>
+            
+            
+            <!-- Modal de registro exitoso -->
+            <div class="modal fade" id="registroExitosoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Registro exitoso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Tu mensaje de registro exitoso aquí.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </main>
+
+        <!--               Pie de página (Footer)                 -->
+        <footer class="text-center text-white">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom ms-auto">
+                <!-- Left -->
+                <div class="mx-5 d-none d-lg-block">
+                    <span>Conéctate con nuestras redes sociales:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div class="icons-social-networks d-flex flex-wrap justify-content-center">
+                    <a href="https://www.facebook.com/codoacodooficial" target="_blank"  class="me-4 link-secondary" rel="noopener noreferrer" >
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/EducacionBA" target="_blank"  class="me-4 link-secondary" rel="noopener noreferrer">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@codoacodo5195" target="_blank"  class="me-4 link-secondary" rel="noopener noreferrer">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/programacodoacodo" target="_blank"  class="me-4 link-secondary" rel="noopener noreferrer">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/codo-a-codo" target="_blank"  class="me-4 link-secondary" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links -->
+            <section class="mb-4 mx-5">
+                <!--Grid row-->
+                <div class="row col-12 mt-3">
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Preguntas frecuentes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Contáctanos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Prensa</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Conferencias</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Terminos y condiciones</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Privacidad</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg col-md-6 mb-4 mb-md-0">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-white">Estudiantes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+                <p>Creado por Cesar Cantoral (2023) © comisión 23556</p>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    
+        <!-- Script -->
+        <script>
+         
+
+                function changeColor(element) {
+                    // Desactivar el color personalizado para todos los enlaces
+                    $('.nav-link').removeClass('custom-clicked');
+
+                    // Activar el color personalizado para el enlace actual
+                    $(element).addClass('custom-clicked');
+                }
+
+                function validarFormulario() {
+                    var nombreInput = document.getElementById("nombre");
+                    var apellidoInput = document.getElementById("apellido");
+                    var emailInput = document.getElementById("mail");
+                    var comentarioInput = document.getElementById("tema");
+                    var nombreError = document.getElementById("nombreError");
+                    var apellidoError = document.getElementById("apellidoError");
+                    var emailError = document.getElementById("emailError");
+                    var comentarioError = document.getElementById("comentarioError");
+
+                    // Expresión regular para validar el formato del correo electrónico
+                    var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    // Limpiar mensajes de error
+                    nombreError.innerHTML = "";
+                    apellidoError.innerHTML = "";
+                    emailError.innerHTML = "";
+                    comentarioError.innerHTML = "";
+
+                    var isValid = true; // Variable para controlar si el formulario es válido
+
+                    // Verificar si los campos no están vacíos
+                    if (nombreInput.value.trim() === "") {
+                        nombreError.innerHTML = "Por favor, ingrese su nombre.";
+                        isValid = false; // El formulario no es válido
+                    }
+
+                    if (apellidoInput.value.trim() === "") {
+                        apellidoError.innerHTML = "Por favor, ingrese su apellido.";
+                        isValid = false; // El formulario no es válido
+                    }
+
+                    if (emailInput.value.trim() === "") {
+                        emailError.innerHTML = "Por favor, ingrese su correo electrónico.";
+                        isValid = false; // El formulario no es válido
+
+                    } else if (!regexEmail.test(emailInput.value)) {
+                        emailError.innerHTML = "Correo electrónico inválido. Por favor, ingrese un correo válido.";
+                        isValid = false; // El formulario no es válido
+                    }
+
+                    if (comentarioInput.value.trim() === "") {
+                        comentarioError.innerHTML = "Por favor, ingrese su motivo.";
+                        isValid = false; // El formulario no es válido
+                    }
+
+                    return isValid; // Devuelve true si el formulario es válido y puede enviarse, o false si no es válido y debe detenerse el envío.
+
+                }
+                
+                
+                // Esta función recoge el parámetro de la URL y muestra el modal si es "true"
+                // Función para obtener parámetros de la URL
+                function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                        results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                }
+
+                // Verificar si la URL contiene el parámetro registroExitoso y mostrar el modal si es true
+                window.onload = function() {
+                    var registroExitoso = getParameterByName('registroExitoso');
+                    if (registroExitoso === 'true') {
+                        var registroExitosoModal = new bootstrap.Modal(document.getElementById('registroExitosoModal'));
+                        registroExitosoModal.show();
+                    }
+                };
+                
+                
+
+      
+        </script>
+        
+  
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+
+        
+  
+    </html>
